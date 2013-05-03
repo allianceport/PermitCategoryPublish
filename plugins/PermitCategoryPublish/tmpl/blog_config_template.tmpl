@@ -1,0 +1,21 @@
+<mtapp:setting
+    id="permit_category_publish_enable"
+    label="<__trans phrase="PermitCategoryPublish enable:">"
+    hint="<__trans phrase="PermitCategoryPublish enable Hint">">
+    <input  type="checkbox" value="1"
+            name="permit_category_publish_enable"
+            id="permit_category_publish_enable"
+            <mt:if name="permit_category_publish_enable">
+                checked="checked"
+            </mt:if>/>
+</mtapp:setting>
+
+<mtapp:setting
+    id="permit_category_publish_category_ids"
+    label="<__trans phrase="PermitCategoryPublish category_ids:">"
+    hint="<__trans phrase="PermitCategoryPublish category_ids Hint">">
+    <input  type="text"
+            name="permit_category_publish_category_ids"
+            id="permit_category_publish_category_ids"
+            value="<mt:var name="permit_category_publish_category_ids" escape="html">" />
+</mtapp:setting>

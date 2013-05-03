@@ -1,0 +1,17 @@
+id: permitcategorypublish
+key: MT::Plugin::PermitCategoryPublish
+name: PermitCategoryPublish
+version: 0.1
+description: <MT_TRANS phrase='description of PermitCategoryPublish'>
+doc_link: http://m-logic.co.jp/mt-plugins/mt-permit_category_publish/docs/mt-permit_category_publish.html
+author_name: Allianceport, LLC.
+author_link: http://www.allianceport.jp/
+l10n_class: PermitCategoryPublish::L10N
+blog_config_template: blog_config_template.tmpl
+settings:
+    permit_category_publish_enable:
+        default: 0
+    permit_category_publish_category_ids:
+callbacks:
+    #----- Hook
+    build_file_filter: $PermitCategoryPublish::PermitCategoryPublish::Plugin::hdlr_cb_build_file_filter
